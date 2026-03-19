@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Especialista em tráfego pago, criação de sites e SEO local. Gestão de Google Ads e Meta Ads para empresas no Brasil e exterior. Análise gratuita pelo WhatsApp.">
+<meta name="robots" content="index, follow">
+<title>Rota do Marketing | Especialista em Tráfego Pago, Sites e SEO Local</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"></noscript>
+<style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f2ee;
+    --orange: #f45c1b;
+    --orange-dark: #c94810;
+    --gray: #1a1a1a;
+    --gray-mid: #2e2e2e;
+    --gray-light: #888;
+    --text-muted: #aaa;
+    --border: rgba(255,255,255,0.08);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--black);
+    color: var(--white);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  h1,h2,h3,h4 { font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.15; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 6vw;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.15rem; letter-spacing: -0.02em; }
+  .logo span { color: var(--orange); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 400; transition: color .2s; }
+  .nav-links a:hover { color: var(--white); }
+  .nav-cta {
+    background: var(--orange); color: #fff; text-decoration: none;
+    padding: 10px 22px; border-radius: 6px; font-size: 0.88rem; font-weight: 500;
+    transition: background .2s, transform .15s;
+  }
+  .nav-cta:hover { background: var(--orange-dark); transform: translateY(-1px); }
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: .3s; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    padding: 120px 6vw 80px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+    width: 900px; height: 900px;
+    background: radial-gradient(circle, rgba(244,92,27,0.1) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-content { max-width: 800px; position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(244,92,27,0.12); border: 1px solid rgba(244,92,27,0.3);
+    color: var(--orange); padding: 6px 14px; border-radius: 100px;
+    font-size: 0.82rem; font-weight: 500; margin-bottom: 28px;
+    animation: fadeUp .6s ease both;
+  }
+  .hero-badge::before { content: '●'; font-size: 0.6rem; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+  h1 {
+    font-size: clamp(2.8rem, 6.5vw, 5rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+    animation: fadeUp .6s .1s ease both;
+  }
+  h1 em { font-style: normal; color: var(--orange); }
+  .hero-sub {
+    font-size: 1.15rem; color: #bbb; font-weight: 300; max-width: 600px;
+    margin-bottom: 40px; line-height: 1.8; text-align: center;
+    animation: fadeUp .6s .2s ease both;
+  }
+  .hero-actions {
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+    animation: fadeUp .6s .3s ease both;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--orange); color: #fff; text-decoration: none;
+    padding: 14px 28px; border-radius: 8px; font-weight: 500; font-size: 1rem;
+    transition: background .2s, transform .15s, box-shadow .2s;
+    box-shadow: 0 4px 24px rgba(244,92,27,0.3);
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(244,92,27,0.4); }
+  .btn-secondary {
+    display: inline-flex; align-items: center; gap: 8px;
+    border: 1px solid var(--border); color: var(--white); text-decoration: none;
+    padding: 14px 28px; border-radius: 8px; font-weight: 400; font-size: 1rem;
+    transition: border-color .2s, background .2s;
+  }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.04); }
+  .hero-stats {
+    display: flex; gap: 48px; margin-top: 60px; flex-wrap: wrap; justify-content: center;
+    animation: fadeUp .6s .4s ease both;
+  }
+  .stat-item { border-left: 2px solid var(--orange); padding-left: 16px; }
+  .stat-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.8rem; font-weight: 700; line-height: 1; }
+  .stat-label { font-size: 0.82rem; color: var(--text-muted); margin-top: 4px; }
+  @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+
+  /* SECTION BASE */
+  section { padding: 96px 6vw; }
+  .section-label {
+    display: inline-block; font-size: 0.78rem; font-weight: 600; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--orange); margin-bottom: 16px;
+  }
+  .section-title { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .section-sub { font-size: 1.05rem; color: #999; max-width: 520px; line-height: 1.8; }
+
+  /* SERVICES */
+  .services { background: var(--gray); }
+  .services-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 56px; }
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2px; }
+  .service-card {
+    background: var(--black); padding: 40px 36px;
+    border: 1px solid var(--border);
+    transition: border-color .25s, transform .25s;
+    position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+    background: var(--orange); transform: scaleX(0); transform-origin: left;
+    transition: transform .3s ease;
+  }
+  .service-card:hover { border-color: rgba(244,92,27,0.3); transform: translateY(-4px); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    width: 48px; height: 48px; background: rgba(244,92,27,0.1);
+    border-radius: 10px; display: flex; align-items: center; justify-content: center;
+    margin-bottom: 24px; font-size: 1.4rem;
+  }
+  .service-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 12px; }
+  .service-card p { font-size: 0.92rem; color: #999; line-height: 1.75; margin-bottom: 20px; }
+  .service-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: var(--orange); text-decoration: none; font-size: 0.88rem; font-weight: 500;
+    transition: gap .2s;
+  }
+  .service-link:hover { gap: 10px; }
+
+  /* HOW IT WORKS */
+  .how { background: var(--black); }
+  .how-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .how-steps { display: flex; flex-direction: column; gap: 0; }
+  .how-step {
+    display: flex; gap: 24px; padding: 28px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .how-step:last-child { border-bottom: none; }
+  .step-num {
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2.5rem; font-weight: 800;
+    color: rgba(244,92,27,0.45); line-height: 1; flex-shrink: 0; width: 56px;
+  }
+  .step-content h4 { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; }
+  .step-content p { font-size: 0.9rem; color: #888; line-height: 1.7; }
+  .how-visual {
+    background: var(--gray); border-radius: 16px; padding: 40px;
+    border: 1px solid var(--border); position: relative;
+  }
+  .how-visual h3 { font-size: 1.1rem; margin-bottom: 24px; color: #ccc; }
+  .metric-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 14px 0; border-bottom: 1px solid var(--border);
+  }
+  .metric-row:last-child { border-bottom: none; }
+  .metric-label { font-size: 0.88rem; color: #888; }
+  .metric-val { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1rem; color: var(--orange); }
+  .metric-bar { height: 4px; background: var(--gray-mid); border-radius: 2px; margin-top: 6px; overflow: hidden; }
+  .metric-fill { height: 100%; background: var(--orange); border-radius: 2px; transition: width 1.5s ease; }
+
+  /* ABOUT */
+  .about { background: var(--gray); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: center; }
+  .about-photo {
+    position: relative;
+  }
+  .about-photo-placeholder {
+    aspect-ratio: 4/5; background: var(--gray-mid);
+    border-radius: 16px; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid var(--border); position: relative;
+  }
+  .about-photo-placeholder span { font-size: 4rem; opacity: .3; }
+  .about-badge-cert {
+    position: absolute; bottom: -16px; right: -16px;
+    background: var(--orange); color: #fff;
+    padding: 12px 18px; border-radius: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.8rem; font-weight: 700;
+    text-align: center; line-height: 1.3;
+    box-shadow: 0 8px 24px rgba(244,92,27,0.4);
+  }
+  .about-text .section-title { margin-bottom: 20px; }
+  .about-text p { color: #999; line-height: 1.85; margin-bottom: 16px; font-size: 0.97rem; }
+  .about-credentials { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .credential {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    padding: 8px 14px; border-radius: 6px; font-size: 0.83rem; color: #ccc;
+  }
+  .credential::before { content: '✓'; color: var(--orange); font-weight: 700; }
+
+  /* TESTIMONIALS */
+  .testimonials { background: var(--black); }
+  .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px; }
+  .testimonial-card {
+    background: var(--gray); border: 1px solid var(--border);
+    border-radius: 12px; padding: 32px;
+    transition: border-color .25s;
+  }
+  .testimonial-card:hover { border-color: rgba(244,92,27,0.2); }
+  .stars { color: var(--orange); font-size: 0.9rem; margin-bottom: 16px; letter-spacing: 2px; }
+  .testimonial-text { font-size: 0.95rem; color: #ccc; line-height: 1.8; margin-bottom: 20px; font-style: italic; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; }
+  .author-avatar {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--orange); display: flex; align-items: center; justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.9rem; color: #fff;
+  }
+  .author-name { font-weight: 500; font-size: 0.9rem; }
+  .author-role { font-size: 0.8rem; color: var(--text-muted); }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--orange);
+    padding: 80px 6vw; text-align: center;
+  }
+  .cta-section h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: #fff; margin-bottom: 16px; }
+  .cta-section p { color: rgba(255,255,255,0.85); font-size: 1.05rem; max-width: 500px; margin: 0 auto 36px; }
+  .btn-white {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #fff; color: var(--orange); text-decoration: none;
+    padding: 16px 32px; border-radius: 8px; font-weight: 600; font-size: 1rem;
+    transition: transform .15s, box-shadow .2s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.25); }
+
+  /* FOOTER */
+  footer {
+    background: var(--gray); border-top: 1px solid var(--border);
+    padding: 60px 6vw 32px;
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand .logo { font-size: 1.2rem; display: block; margin-bottom: 14px; }
+  .footer-brand p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; max-width: 280px; }
+  .footer-col h4 { font-size: 0.82rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #666; margin-bottom: 16px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul a { color: var(--text-muted); text-decoration: none; font-size: 0.88rem; transition: color .2s; }
+  .footer-col ul a:hover { color: var(--white); }
+  .footer-contact { display: flex; flex-direction: column; gap: 10px; }
+  .footer-contact a { color: var(--text-muted); text-decoration: none; font-size: 0.88rem; transition: color .2s; }
+  .footer-contact a:hover { color: var(--white); }
+  .footer-bottom {
+    border-top: 1px solid var(--border); padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;
+    font-size: 0.8rem; color: var(--text-muted);
+  }
+  .footer-bottom a { color: var(--text-muted); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--white); }
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 200;
+    width: 56px; height: 56px; background: #25d366;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+    text-decoration: none; transition: transform .2s, box-shadow .2s;
+  }
+  .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.5); }
+  .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .how-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .about-photo { display: none; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .hero-stats { gap: 24px; }
+    .services-header { flex-direction: column; align-items: flex-start; }
+    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WJ7S9T4V');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ7S9T4V"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav>
+  <div class="logo">Rota do<span>Marketing</span></div>
+  <ul class="nav-links">
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+  </ul>
+  <a href="https://wa.me/5543988306859?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20serviços." class="nav-cta" target="_blank" rel="noopener">Fale pelo WhatsApp</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<main>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">Brasil e exterior</div>
+    <h1>Sua empresa na <em>rota certa</em> do marketing digital</h1>
+    <p class="hero-sub">Gestão de tráfego pago, criação de sites e SEO local para empresas que querem crescer online com estratégia e resultado.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/5543988306859?text=Olá!%20Quero%20uma%20análise%20gratuita%20do%20meu%20negócio." class="btn-primary" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Análise gratuita
+      </a>
+      <a href="#servicos" class="btn-secondary">Ver serviços →</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">+17</div>
+        <div class="stat-label">Anos no digital</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">BR+</div>
+        <div class="stat-label">Atendimento em todo o Brasil e exterior</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="servicos">
+  <div class="services-header">
+    <div>
+      <span class="section-label">O que fazemos</span>
+      <h2 class="section-title">Soluções completas<br>para sua presença digital</h2>
+    </div>
+    <p class="section-sub">Do anúncio ao site, do clique à conversão. Cada serviço pensado para gerar resultado real para o seu negócio.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">📈</div>
+      <h3>Gestão de Tráfego Pago</h3>
+      <p>Campanhas no Google Ads e Meta Ads gerenciadas por especialista certificado. Estratégia personalizada, relatórios semanais e suporte direto pelo WhatsApp.</p>
+      <a href="gestor-de-trafego-pago.html" class="service-link">Ver gestão de tráfego pago →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🖥️</div>
+      <h3>Criação de Sites e Landing Pages</h3>
+      <p>Sites profissionais e landing pages de alta conversão, desenvolvidos com foco em velocidade, SEO e experiência do usuário para transformar visitantes em clientes.</p>
+      <a href="criacao-de-sites.html" class="service-link">Ver criação de sites →</a>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">📍</div>
+      <h3>SEO e Google Meu Negócio</h3>
+      <p>Apareça nas buscas locais quando seu cliente mais precisa. Otimização completa do Google Meu Negócio para aumentar sua visibilidade e atrair clientes próximos.</p>
+      <a href="seo-google-meu-negocio.html" class="service-link">Ver SEO e Google Meu Negócio →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="como-funciona">
+  <div class="how-grid">
+    <div>
+      <span class="section-label">Como funciona</span>
+      <h2 class="section-title">Do primeiro contato ao resultado</h2>
+      <div class="how-steps">
+        <div class="how-step">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h4>Análise gratuita</h4>
+            <p>Entendo seu negócio, seu mercado e seus objetivos para montar uma estratégia sob medida.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h4>Estratégia personalizada</h4>
+            <p>Defino canais, orçamento, público-alvo e metas realistas antes de investir um centavo.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h4>Execução e otimização</h4>
+            <p>Campanha no ar, acompanho os dados diariamente e otimizo para reduzir custo e aumentar resultado.</p>
+          </div>
+        </div>
+        <div class="how-step">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h4>Relatórios e transparência</h4>
+            <p>Relatório semanal com tudo que aconteceu, o que foi feito e o que vem a seguir.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="how-visual">
+      <h3>Exemplo de resultado de campanha</h3>
+      <div class="metric-row">
+        <div>
+          <div class="metric-label">Taxa de cliques (CTR)</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:72%"></div></div>
+        </div>
+        <div class="metric-val">7,2%</div>
+      </div>
+      <div class="metric-row">
+        <div>
+          <div class="metric-label">Custo por clique (CPC)</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:55%"></div></div>
+        </div>
+        <div class="metric-val">R$ 3,40</div>
+      </div>
+      <div class="metric-row">
+        <div>
+          <div class="metric-label">Taxa de conversão</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:80%"></div></div>
+        </div>
+        <div class="metric-val">8,0%</div>
+      </div>
+      <div class="metric-row">
+        <div>
+          <div class="metric-label">Retorno sobre investimento</div>
+          <div class="metric-bar"><div class="metric-fill" style="width:90%"></div></div>
+        </div>
+        <div class="metric-val">4,5x</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="sobre">
+  <div class="about-grid">
+    <div class="about-photo">
+      <div class="about-photo-placeholder">
+        <span>👤</span>
+      </div>
+      <div class="about-badge-cert">Certificado<br>Google Ads</div>
+    </div>
+    <div class="about-text">
+      <span class="section-label">Sobre</span>
+      <h2 class="section-title">César Zampieri<br>Especialista em marketing digital</h2>
+      <p>Desde 2009 no mercado digital, com trajetória construída no e-commerce e nos últimos 2 anos focada em gestão de tráfego pago. Certificado pelo Google Ads e com experiência prática em destrave e otimização de campanhas.</p>
+      <p>Trabalho com atenção personalizada em cada cliente — sem terceirizar, sem automação genérica. Você fala diretamente comigo em todas as etapas do projeto.</p>
+      <div class="about-credentials">
+        <span class="credential">Certificação Google Ads</span>
+        <span class="credential">+17 anos no digital</span>
+        <span class="credential">Brasil e exterior</span>
+        <span class="credential">Suporte pelo WhatsApp</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="depoimentos">
+  <span class="section-label">Depoimentos</span>
+  <h2 class="section-title">O que dizem os clientes</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Profissional sério e comprometido. As campanhas trouxeram resultado desde o primeiro mês e o suporte pelo WhatsApp faz toda a diferença."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">JS</div>
+        <div>
+          <div class="author-name">João Silva</div>
+          <div class="author-role">Empresário — Londrina, PR</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Antes eu jogava dinheiro fora em anúncios sem retorno. Com a gestão do César, finalmente consigo acompanhar o resultado de cada real investido."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">MC</div>
+        <div>
+          <div class="author-name">Maria Costa</div>
+          <div class="author-role">Clínica estética — São Paulo, SP</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p class="testimonial-text">"Relatórios claros, atendimento rápido e estratégia que faz sentido para o meu negócio. Recomendo sem hesitar."</p>
+      <div class="testimonial-author">
+        <div class="author-avatar">RP</div>
+        <div>
+          <div class="author-name">Ricardo Pereira</div>
+          <div class="author-role">Loja online — Curitiba, PR</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Pronto para colocar sua empresa na rota certa?</h2>
+  <p>Solicite uma análise gratuita e descubra o que está impedindo seu negócio de crescer online.</p>
+  <a href="https://wa.me/5543988306859?text=Olá!%20Quero%20uma%20análise%20gratuita%20do%20meu%20negócio." class="btn-white" target="_blank" rel="noopener">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Falar pelo WhatsApp agora
+  </a>
+</section>
+
+<!-- FOOTER -->
+</main>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <span class="logo">Rota do<span>Marketing</span></span>
+      <p>Gestão de tráfego pago, criação de sites e SEO local para empresas que querem crescer no digital com estratégia e resultado.</p>
+      <p style="margin-top:12px; font-size:.8rem; color:#555;">C Zampieri Ltda — CNPJ 13.311.957/0001-09</p>
+    </div>
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="gestor-de-trafego-pago.html">Google Ads</a></li>
+        <li><a href="especialista-em-trafego-pago.html">Meta Ads</a></li>
+        <li><a href="criacao-de-sites.html">Criação de Sites</a></li>
+        <li><a href="criacao-de-sites.html">Landing Pages</a></li>
+        <li><a href="seo-google-meu-negocio.html">SEO e Google Meu Negócio</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <div class="footer-contact">
+        <a href="https://wa.me/5543988306859" target="_blank" rel="noopener">(43) 98830-6859</a>
+        <a href="mailto:cesarzampieri@outlook.com">cesarzampieri@outlook.com</a>
+        <span style="color:#555; font-size:.85rem;">Londrina, PR — Brasil</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Rota do Marketing. Todos os direitos reservados.</span>
+    <div style="display:flex; gap:20px;">
+      <a href="politica-de-privacidade.html">Política de Privacidade</a>
+      <a href="termos-de-uso.html">Termos de Uso</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5543988306859?text=Olá!%20Vim%20pelo%20site%20e%20quero%20saber%20mais%20sobre%20os%20serviços." class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  function toggleMenu() {
+    const links = document.querySelector('.nav-links');
+    const cta = document.querySelector('.nav-cta');
+    if (links) links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+    if (cta) cta.style.display = cta.style.display === 'inline-flex' ? 'none' : 'inline-flex';
+  }
+</script>
+</body>
+</html>
